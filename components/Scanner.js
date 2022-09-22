@@ -69,21 +69,21 @@ const Scanner = () => {
   }, [data, dataType]);
 
   return (
-    <>
-      <div>
+    <div className="center" >
+      <div className="center">
         <video ref={video} autoPlay muted hidden></video>
         <canvas ref={canvas} />
       </div>
-      <button onClick={openCamera}>Kamerayı Aç</button>
+      <button style={{marginTop:20}} onClick={openCamera}>Kamerayı Aç</button>
       <div>
         {data && dataType ? (
           <>
-            <p>{data}</p>
-            <p>{dataType}</p>
+            <p className="resultText" >{data}</p>
+            <p className="resultText">{dataType}</p>
           </>
         ) : null}
       </div>
-    </>
+    </div>
   );
 };
 
